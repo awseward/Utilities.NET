@@ -31,13 +31,7 @@ namespace StringUtils.Casing
             var builder = new StringBuilder();
             foreach (var word in input)
             {
-                if (word.Length > 1)
-                {
-                    builder.Append(char.ToUpper(word[0]) + word.Substring(1));
-                    continue;
-                }
-
-                builder.Append(word.ToUpper());
+                builder.Append(word.FirstToUpper());
             }
 
             return builder.ToString();

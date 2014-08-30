@@ -9,19 +9,10 @@ namespace StringUtils.Casing
     {
         public override string Build(IEnumerable<string> input)
         {
-            var first = input.Take(1).Single();
+            if (input.Count() == 0) { return string.Empty; }
 
-            string capFirst;
-            if (first.Length > 1)
-            {
-                capFirst = char.ToUpper(first.Take(1).Single()) + first.Substring(1);
-            }
-            else
-            {
-                capFirst = first.ToUpper();
-            }
-
-            return string.Join(" ", capFirst, base.Build(input.Skip(1)));
+            var first = input.First().FirstToUpper();
+            return string.Join(" ", first, base.Build(input.Skip(1)));
         }
     }
 }

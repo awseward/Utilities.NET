@@ -47,6 +47,7 @@
     <Compile Include="Casing\Cases\SnakeConst.cs" />
     <Compile Include="Casing\Cases\Space.cs" />
     <Compile Include="Casing\Cases\StringCase.cs" />
+    <Compile Include="Casing\Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringTransformer.cs" />
   </ItemGroup>
