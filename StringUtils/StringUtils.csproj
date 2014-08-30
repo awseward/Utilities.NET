@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Casing\Cases\Camel.cs" />
+    <Compile Include="Casing\Cases\LeadingUnderscoreCamel.cs" />
     <Compile Include="Casing\CaseTransformer.cs" />
     <Compile Include="Casing\Cases\Pascal.cs" />
     <Compile Include="Casing\Cases\Sentence.cs" />
