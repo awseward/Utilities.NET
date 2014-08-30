@@ -39,14 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Casing\Camel.cs" />
+    <Compile Include="Casing\Cases\Camel.cs" />
     <Compile Include="Casing\CaseTransformer.cs" />
-    <Compile Include="Casing\Pascal.cs" />
-    <Compile Include="Casing\Sentence.cs" />
-    <Compile Include="Casing\Snake.cs" />
-    <Compile Include="Casing\SnakeConst.cs" />
-    <Compile Include="Casing\Space.cs" />
-    <Compile Include="Casing\StringCase.cs" />
+    <Compile Include="Casing\Cases\Pascal.cs" />
+    <Compile Include="Casing\Cases\Sentence.cs" />
+    <Compile Include="Casing\Cases\Snake.cs" />
+    <Compile Include="Casing\Cases\SnakeConst.cs" />
+    <Compile Include="Casing\Cases\Space.cs" />
+    <Compile Include="Casing\Cases\StringCase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringTransformer.cs" />
   </ItemGroup>
