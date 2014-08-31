@@ -49,9 +49,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StringUtils\StringUtils.csproj">
+    <ProjectReference Include="..\StringUtils\Utilities.csproj">
       <Project>{509a5276-5663-424f-9a25-bdefd09817a7}</Project>
-      <Name>StringUtils</Name>
+      <Name>Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
