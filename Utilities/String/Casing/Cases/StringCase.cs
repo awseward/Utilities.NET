@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Utilities.Casing
+namespace Utilities.String.Casing
 {
     public abstract class StringCase
     {

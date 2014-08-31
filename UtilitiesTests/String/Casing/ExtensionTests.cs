@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
-using Utilities.Casing;
+using Utilities.String.Casing;
 
-namespace UtilitiesTests.Casing
+namespace UtilitiesTests.String.Casing
 {
     [TestFixture]
     public class ExtensionTests
