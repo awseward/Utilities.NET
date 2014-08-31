@@ -7,6 +7,8 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("Utilities")]
 [assembly: AssemblyProduct("Utilities")]
+[assembly: AssemblyCompany("awseward")]
+[assembly: AssemblyDescription("Some helpful tools for making life with .NET just a little bit better")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
