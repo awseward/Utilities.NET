@@ -45,21 +45,21 @@ namespace Utilities.Collections
             return true;
         }
 
-        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Func<T, T> transformation)
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> collection, Func<T, T> transformation)
         {
-            return enumable.EveryOther(transformation, true);
+            return collection.EveryOther(transformation, true);
         }
 
-        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Func<T, T> transformation, bool affectsZero)
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> collection, Func<T, T> transformation, bool affectsZero)
         {
-            return enumable.EveryOther(transformation, affectsZero, t => false);
+            return collection.EveryOther(transformation, affectsZero, t => false);
         }
 
-        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Func<T, T> transformation, bool affectsZero, Func<T, bool> skip)
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> collection, Func<T, T> transformation, bool affectsZero, Func<T, bool> skip)
         {
             var doSomething = !affectsZero;
 
-            foreach (var item in enumable)
+            foreach (var item in collection)
             {
                 var shouldSkip = skip(item);
 
@@ -68,21 +68,21 @@ namespace Utilities.Collections
             }
         }
 
-        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Action<T> action)
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> collection, Action<T> action)
         {
-            return enumable.EveryOther(action, true);
+            return collection.EveryOther(action, true);
         }
 
-        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Action<T> action, bool affectsZero)
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> collection, Action<T> action, bool affectsZero)
         {
-            return enumable.EveryOther(action, affectsZero, t => false);
+            return collection.EveryOther(action, affectsZero, t => false);
         }
 
-        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Action<T> action, bool affectsZero, Func<T, bool> skip)
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> collection, Action<T> action, bool affectsZero, Func<T, bool> skip)
         {
             var doSomething = affectsZero;
 
-            foreach (var item in enumable)
+            foreach (var item in collection)
             {
                 if (skip(item)) { continue; }
 
@@ -90,7 +90,7 @@ namespace Utilities.Collections
                 doSomething = !doSomething;
             }
 
-            return enumable;
+            return collection;
         }
 
         #region Obsolete
