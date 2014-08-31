@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace StringUtils.Casing.Cases
+namespace Utilities.Casing.Cases
 {
     public class LeadingUnderscoreCamel : Camel
     {
