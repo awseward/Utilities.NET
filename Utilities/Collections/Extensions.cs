@@ -44,5 +44,83 @@ namespace Utilities.Collections
             }
             return true;
         }
+
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Func<T, T> transformation)
+        {
+            return enumable.EveryOther(transformation, true);
+        }
+
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Func<T, T> transformation, bool affectsZero)
+        {
+            return enumable.EveryOther(transformation, affectsZero, t => false);
+        }
+
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Func<T, T> transformation, bool affectsZero, Func<T, bool> skip)
+        {
+            var doSomething = !affectsZero;
+
+            foreach (var item in enumable)
+            {
+                var shouldSkip = skip(item);
+
+                if (!shouldSkip) { doSomething = !doSomething; }
+                yield return (!shouldSkip && doSomething) ? transformation(item) : item;
+            }
+        }
+
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Action<T> action)
+        {
+            return enumable.EveryOther(action, true);
+        }
+
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Action<T> action, bool affectsZero)
+        {
+            return enumable.EveryOther(action, affectsZero, t => false);
+        }
+
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, Action<T> action, bool affectsZero, Func<T, bool> skip)
+        {
+            var doSomething = affectsZero;
+
+            foreach (var item in enumable)
+            {
+                if (skip(item)) { continue; }
+
+                if (doSomething) { action(item); }
+                doSomething = !doSomething;
+            }
+
+            return enumable;
+        }
+
+        #region Obsolete
+
+        [Obsolete]
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, bool affectsZero, Func<T, T> transformation)
+        {
+            var doSomething = !affectsZero;
+
+            foreach (var item in enumable)
+            {
+                doSomething = !doSomething;
+                yield return (doSomething) ? transformation(item) : item;
+            }
+        }
+
+        [Obsolete]
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, bool affectsZero, Action<T> action)
+        {
+            var doSomething = affectsZero;
+
+            foreach (var item in enumable)
+            {
+                if (doSomething) { action(item); }
+                doSomething = !doSomething;
+            }
+
+            return enumable;
+        }
+
+        #endregion
     }
 }
