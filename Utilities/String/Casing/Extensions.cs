@@ -23,7 +23,7 @@ namespace Utilities.String.Casing
         {
             if (str.Length > 1)
             {
-                return char.ToUpper(str[0]) + new string(str.Substring(1).Select(ch => char.ToLower(ch)).ToArray());
+                return char.ToUpper(str[0]) + str.Substring(1).ToLower();
             }
 
             return str.ToUpper();
