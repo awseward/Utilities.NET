@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{49A89C41-E888-4D1D-A33E-4DA31279723C}</ProjectGuid>
+    <ProjectGuid>{509A5276-5663-424F-9A25-BDEFD09817A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StringUtilTests</RootNamespace>
-    <AssemblyName>StringUtilTests</AssemblyName>
+    <RootNamespace>Utilities</RootNamespace>
+    <AssemblyName>Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,20 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Casing\ExtensionTests.cs" />
+    <Compile Include="Casing\Cases\Camel.cs" />
+    <Compile Include="Casing\Cases\LeadingUnderscoreCamel.cs" />
+    <Compile Include="Casing\CaseTransformer.cs" />
+    <Compile Include="Casing\Cases\Pascal.cs" />
+    <Compile Include="Casing\Cases\Sentence.cs" />
+    <Compile Include="Casing\Cases\Snake.cs" />
+    <Compile Include="Casing\Cases\SnakeConst.cs" />
+    <Compile Include="Casing\Cases\Space.cs" />
+    <Compile Include="Casing\Cases\StringCase.cs" />
+    <Compile Include="Casing\Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\StringUtils\StringUtils.csproj">
-      <Project>{509a5276-5663-424f-9a25-bdefd09817a7}</Project>
-      <Name>StringUtils</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+    <Compile Include="StringTransformer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

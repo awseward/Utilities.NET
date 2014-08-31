@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace StringUtils.Casing
+namespace Utilities.Casing
 {
-    public class Snake : StringCase
+    public class Space : StringCase
     {
         public override IEnumerable<string> Split(string input)
         {
-            return input.Split('_');
+            return input.Split(' ');
         }
 
         public override string Build(IEnumerable<string> input)
         {
-            return string.Join("_", input.Select(str => str.ToLower()));
+            return string.Join(" ", input);
         }
     }
 }

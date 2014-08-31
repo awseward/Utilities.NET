@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace StringUtils.Casing
+namespace Utilities.Casing
 {
     public class SnakeConst : Snake
     {
