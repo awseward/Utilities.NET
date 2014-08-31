@@ -14,9 +14,9 @@ namespace UtilitiesTests
         public void EveryOtherFuncWorksCorrectly()
         {
             var str = "hamburger";
-            var wat = str.EveryOther(true, ch => char.ToUpper(ch));
+            var transformed = str.EveryOther(ch => char.ToUpper(ch));
 
-            Assert.AreEqual("HaMbUrGeR", new string(wat.ToArray()));
+            Assert.AreEqual("HaMbUrGeR", new string(transformed.ToArray()));
         }
 
         [Test]
@@ -25,7 +25,7 @@ namespace UtilitiesTests
             var str = "hamburger";
             var builder = new StringBuilder();
 
-            str.EveryOther(true, ch => builder.Append(ch));
+            str.EveryOther(ch => builder.Append(ch));
 
             Assert.AreEqual("hmugr", builder.ToString());
         }

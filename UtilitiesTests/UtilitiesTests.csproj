@@ -45,6 +45,7 @@
     <Compile Include="CollectionsTests.cs" />
     <Compile Include="String\Casing\ExtensionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="String\ExtensionTests.cs" />
     <Compile Include="String\Http\ExtensionTests.cs" />
     <Compile Include="String\Misc\AlphabetTests.cs" />
   </ItemGroup>

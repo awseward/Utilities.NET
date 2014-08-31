@@ -52,6 +52,7 @@
     <Compile Include="String\Casing\Cases\StringCase.cs" />
     <Compile Include="String\Casing\Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="String\Extensions.cs" />
     <Compile Include="String\Http\Extensions.cs" />
     <Compile Include="String\Misc\Alphabet.cs" />
     <Compile Include="String\Misc\Extensions.cs" />
