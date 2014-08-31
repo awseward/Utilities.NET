@@ -18,5 +18,12 @@ namespace Utilities.Collections
 
             return collection.Skip(1);
         }
+
+        public static void Add(this IDictionary<string, string> dict, string key, object value)
+        {
+            if (value == null) { return; }
+
+            dict.Add(key, value.ToString());
+        }
     }
 }
