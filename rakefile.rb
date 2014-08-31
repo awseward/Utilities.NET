@@ -8,6 +8,8 @@ create_config if !File.file?('config.yml')
 
 config = YAML.load_file('config.yml')
 
+task :clean => 'clean:clean'
+
 namespace :clean do
   do_not_clean = config['do_not_clean']
   exclude_string = do_not_clean.map{ |str| "-e \"#{str}\"" }.join(' ')
