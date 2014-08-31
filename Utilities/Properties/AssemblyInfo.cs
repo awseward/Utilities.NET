@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("Utilities")]
 [assembly: AssemblyProduct("Utilities")]
-[assembly: AssemblyCompany("awseward")]
+[assembly: AssemblyCompany("awswrd")]
 [assembly: AssemblyDescription("Some helpful tools for making life with .NET just a little bit better")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 
