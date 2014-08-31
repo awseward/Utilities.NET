@@ -44,5 +44,29 @@ namespace Utilities.Collections
             }
             return true;
         }
+
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, bool affectsZero, Func<T, T> transformation)
+        {
+            var doSomething = !affectsZero;
+
+            foreach(var item in enumable)
+            {
+                doSomething = !doSomething;
+                yield return (doSomething) ? transformation(item) : item;
+            }
+        }
+
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> enumable, bool affectsZero, Action<T> action)
+        {
+            var doSomething = affectsZero;
+
+            foreach (var item in enumable)
+            {
+                if (doSomething) { action(item); }
+                doSomething = !doSomething;
+            }
+
+            return enumable;
+        }
     }
 }
