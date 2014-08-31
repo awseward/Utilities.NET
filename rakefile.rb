@@ -8,8 +8,8 @@ create_config if !File.file?('config.yml')
 
 config = YAML.load_file('config.yml')
 
-desc "Removes files ignored by git, minus ones matching do_not_clean from config.yml"
 task :clean => 'clean:clean'
+task :build => 'msbuild:build'
 
 namespace :clean do
   do_not_clean = config['do_not_clean']
