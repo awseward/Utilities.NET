@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collections\Extensions.cs" />
+    <Compile Include="IBuildable.cs" />
+    <Compile Include="IRebuildable.cs" />
+    <Compile Include="IDeconstructable.cs" />
     <Compile Include="String\Casing\Cases\Camel.cs" />
     <Compile Include="String\Casing\Cases\LeadingUnderscoreCamel.cs" />
     <Compile Include="String\Casing\CaseTransformer.cs" />
